@@ -22,6 +22,7 @@ export default function AddStudent(){
 
     return(
         <div className="ShowStudents">
+        <h2 className='h22'>ADD STUDENT DETAILS</h2>
         {flag?<Navigate to="/students/showall"></Navigate>:
             <form onSubmit={test}>
             <table className="table">

@@ -30,6 +30,7 @@ export default function UpdateStudents(){
     }
     return(
         <div className="ShowStudents">
+        <h2 className='h22'>UPDATE STUDENT DETAILS</h2>
         {flag?<Navigate to="/students/showall"></Navigate>:
             <form onSubmit={test}>
             <table className="table">

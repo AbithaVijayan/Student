@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import AddStudent from './Components/AddStudent';
 import DeleteStudent from './Components/DeleteStudent';
+import Search from './Components/Search';
 import SearchStudents from './Components/SearchStudents';
 import ShowStudents from './Components/ShowStudents';
 import UpdateStudents from './Components/UpdateStudent';
@@ -25,6 +26,7 @@ function App() {
       <Route path="/students/update/:id" element={<UpdateStudents/>}></Route>
       <Route path="/students/search/:id" element={<SearchStudents/>}></Route>
       <Route path="/students/add" element={<AddStudent/>}></Route>
+      <Route path="/students/search" element={<Search/>}></Route>
     </Routes>
     <footer>
       <Footer></Footer>

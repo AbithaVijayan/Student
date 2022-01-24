@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { Button,Box } from '@material-ui/core';
 import './Students.css';
+import SearchStudents from './SearchStudents';
 
 function TableBody(){
     let studArr=useSelector((store)=>store.StudReducer);
@@ -46,7 +47,7 @@ function TableHead(){
     )
 }
 
-export default function ShowStudents(){
+export default function Search(){
     const [searchText, setSearchText] = useState("");
     const [searching, setSearchingState] = useState(false);
     let searchSubmit = (e) =>{
@@ -61,12 +62,20 @@ export default function ShowStudents(){
     return(
         <div className='ShowStudents'>
         <h2 className='h22'>STUDENT DETAILS</h2>
-        
-          <table border="1" className='table1'>
-          <TableHead></TableHead>
-          <TableBody></TableBody>
-          </table>
-          
+        <form className='form1' onSubmit={searchSubmit} method="post" >
+                       <input type="text" value={searchText} onChange={(e) => setSearchText(e.target.value)} onBlur={OnBlurSearch}  className="SearchBar"/> 
+                       {/* <button  type='submit' className="Button"> Search </button> */}
+                       <Button type='submit' size="small" variant="contained" color="success"> Search</Button>
+        </form>
+                {
+                     searching && 
+                    <table border="2" className="table1">
+                                <TableHead></TableHead>
+                                    
+                                <SearchStudents searchText={searchText} />
+                    </table>
+
+                }
         </div>
     );
 }

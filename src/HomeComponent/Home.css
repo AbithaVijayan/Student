@@ -1,0 +1,28 @@
+.Home{
+    display: flex;
+    flex-direction: column  ;
+    min-height: 100vh;
+    background-color: lightblue;
+    border: 2px solid darkblue;
+    height: 600px;
+    width: 100%;
+    background-image: url('https://i1.wp.com/www.freestudentprojects.com/wp-content/uploads/2017/06/Organization-Student-Management-System.jpg?resize=840%2C369');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+.Container{
+    flex: 1;
+} 
+
+.span1{
+ text-align: center;
+ height: 600px;
+ text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+.h22{
+    text-decoration-color: crimson;
+    text-decoration-style: wavy;
+    text-shadow: 10px;
+}

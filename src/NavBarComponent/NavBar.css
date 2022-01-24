@@ -1,0 +1,9 @@
+.nav{
+    background-color: black;
+    color: red;
+    text-shadow: 10px 10px 10px;
+    text-align: center;
+    height: 75px;
+    line-height: 100px;
+    text-decoration: none;
+}
